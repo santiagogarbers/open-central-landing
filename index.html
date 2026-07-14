@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Open Central — Chateá con las empresas. Atendé como nunca.</title>
+<meta name="description" content="Open Central conecta a personas y empresas en una sola conversación: tan simple como usar WhatsApp, y sincronizado en tiempo real con cualquier CRM." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">
+      <img src="assets/logo-oc.png" alt="Open Central" class="brand-mark" />
+      <span class="brand-name">Open Central</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#personas">Personas</a>
+      <a href="#empresas">Empresas</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn btn-outline nav-login">Iniciar sesión</button>
+      <button class="btn btn-primary">Empezar gratis</button>
+    </div>
+
+    <button class="nav-burger" id="navBurger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+
+  <div class="hero-inner">
+
+    <div class="hero-grid">
+      <div class="hero-col-text">
+        <div class="audience-toggle" role="tablist" aria-label="Seleccionar audiencia">
+          <button class="toggle-btn is-active" data-audience="personas" role="tab" aria-selected="true">Para personas</button>
+          <button class="toggle-btn" data-audience="empresas" role="tab" aria-selected="false">Para empresas</button>
+          <span class="toggle-thumb"></span>
+        </div>
+
+        <h1 class="hero-title" data-when="personas">
+          Chateá con tus empresas <span class="underline">como le hablás</span> a un amigo
+        </h1>
+        <h1 class="hero-title" data-when="empresas" hidden>
+          Atendé a tus clientes donde ya están, <span class="underline">conectado a tu CRM</span>
+        </h1>
+
+        <p class="hero-sub" data-when="personas">
+          Un solo chat para todas las empresas con las que hablás — banco, ecommerce, telefonía. Sin apps nuevas, sin formularios eternos, sin repetir tu problema dos veces.
+        </p>
+        <p class="hero-sub" data-when="empresas" hidden>
+          Centralizá WhatsApp, Instagram, chat web y más en una bandeja única, sincronizada en tiempo real con Zendesk, HubSpot, Salesforce o el CRM que ya usás.
+        </p>
+
+        <div class="hero-ctas" data-when="personas">
+          <button class="btn btn-primary btn-lg">Empezar a chatear</button>
+          <a href="#como-funciona" class="btn btn-outline btn-lg">Ver cómo funciona</a>
+        </div>
+        <div class="hero-ctas" data-when="empresas" hidden>
+          <button class="btn btn-primary btn-lg">Conectar mi CRM</button>
+          <a href="#integraciones" class="btn btn-outline btn-lg">Ver integraciones</a>
+        </div>
+
+        <div class="store-badges" data-when="personas">
+          <a href="#" class="store-badge" aria-label="Descargar en App Store">
+            <svg class="badge-icon" width="20" height="20" viewBox="0 0 24 24" fill="#0f172a" aria-hidden="true">
+              <path d="M12 21c-4.5 0-7-3.5-7-8 0-3 1.8-5 4.3-5 1 0 1.7.4 2.2.4.5 0 1.1-.4 2.1-.4 1.8 0 3.2 1 4 2.3-2.1 1.1-2.6 4-1 5.8-.6 2.8-2.6 4.9-4.6 4.9z" />
+              <path d="M12.5 6c-.1-1.3.9-2.6 2.2-2.7.1 1.3-.9 2.6-2.2 2.7z" />
+            </svg>
+            <span class="badge-copy"><small>Descargar en</small><span>App Store</span></span>
+          </a>
+          <a href="#" class="store-badge" aria-label="Disponible en Google Play">
+            <svg class="badge-icon" width="20" height="20" viewBox="0 0 24 24" fill="#0f172a" aria-hidden="true">
+              <path d="M5 3l14 9-14 9V3z" />
+            </svg>
+            <span class="badge-copy"><small>Disponible en</small><span>Google Play</span></span>
+          </a>
+        </div>
+
+        <div class="hero-note" data-when="personas">
+          Más de 2 millones de conversaciones al mes entre personas y empresas
+        </div>
+        <div class="hero-note" data-when="empresas" hidden>
+          Más de 150.000 conversaciones sincronizadas por día
+        </div>
+      </div>
+
+      <div class="hero-col-visual">
+        <div class="hero-showcase">
+          <span class="hero-showcase-blob b1" aria-hidden="true"></span>
+          <span class="hero-showcase-blob b2" aria-hidden="true"></span>
+
+          <div class="hero-showcase-img">
+            <img src="assets/product-screenshot.png" alt="Bandeja de conversaciones de Open Central, con asistente IA y traspaso a agente humano" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="logo-bar">
+      <span>Google</span><span>Airbnb</span><span>Notion</span><span>Shopify</span><span>Zoom</span><span>Stripe</span><span>Upwork</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CÓMO FUNCIONA (dual) ================= -->
+<section class="section section-alt" id="como-funciona">
+  <div class="section-inner">
+    <div class="eyebrow">Cómo funciona</div>
+    <h2 class="h2">Una sola plataforma, dos formas de usarla</h2>
+    <p class="lead">Ya seas una persona que quiere resolver algo rápido, o una empresa que atiende a miles: Open Central habla el mismo idioma para los dos lados de la conversación.</p>
+
+    <div class="dual-cols">
+      <div class="dual-col" id="personas">
+        <div class="dual-visual">
+          <div class="glow-blob orange"></div>
+          <div class="contact-card-mock">
+            <span class="chip-avatar lg" data-icon="whatsapp"></span>
+            <div class="contact-mock-copy"><b>Mi Banco</b><span>Empresa · Verificada</span></div>
+            <button class="btn-mock-add">+ Agregar</button>
+          </div>
+        </div>
+        <div class="dual-body">
+          <div class="dual-tag tag-blue">Para personas</div>
+          <h3 class="dual-title">Como chatear con un amigo</h3>
+          <ol class="steps">
+            <li><span class="step-n">1</span><div><b>Sumá tus contactos</b><p>Agregá a Open Central como agregarías un contacto de WhatsApp. Mismo chat, mismo teléfono.</p></div></li>
+            <li><span class="step-n">2</span><div><b>Chateá con las empresas que ya usás</b><p>Banco, ecommerce, telefonía: todas responden en el mismo hilo, sin instalar apps nuevas.</p></div></li>
+            <li><span class="step-n">3</span><div><b>Resolvé todo sin cambiar de pantalla</b><p>Pagos, pedidos, soporte y agentes humanos cuando los necesitás — todo dentro de la conversación.</p></div></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="dual-col" id="empresas">
+        <div class="dual-visual">
+          <div class="glow-blob blue"></div>
+          <div class="notif-stack-mock">
+            <div class="notif-float n1"><span class="chip-avatar" data-icon="zendesk"></span><div><b>Nuevo ticket sincronizado</b><span>Zendesk</span></div></div>
+            <div class="notif-float n2"><span class="chip-avatar" data-icon="hubspot"></span><div><b>Lead creado</b><span>HubSpot</span></div></div>
+            <div class="notif-float n3"><span class="chip-avatar letter" data-color="#28a745" data-letters="FD"></span><div><b>Caso actualizado</b><span>Freshdesk</span></div></div>
+          </div>
+        </div>
+        <div class="dual-body">
+          <div class="dual-tag tag-dark">Para empresas</div>
+          <h3 class="dual-title">Atención al cliente, conectada a tu CRM</h3>
+          <ol class="steps">
+            <li><span class="step-n">1</span><div><b>Conectá tus canales</b><p>Sumá WhatsApp, Instagram, chat web o email a la bandeja unificada en minutos.</p></div></li>
+            <li><span class="step-n">2</span><div><b>Elegí tu CRM</b><p>Zendesk, HubSpot, Salesforce o el que ya usás. Autorizás el acceso una sola vez.</p></div></li>
+            <li><span class="step-n">3</span><div><b>Dejá que la data fluya</b><p>Cada chat, ticket y lead se sincroniza automáticamente, con historial completo y sin duplicados.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURE: PERSONAS ================= -->
+<section class="section">
+  <div class="section-inner two-col">
+    <div class="col-copy">
+      <div class="eyebrow">Para vos</div>
+      <h2 class="h2 h2-tight">Un chat, todas tus empresas</h2>
+      <p class="lead lead-left">Dejá de buscar el número, el mail o la app de cada empresa. En Open Central todas te escriben — y les contestás — desde un solo lugar, tan simple como tu chat de siempre.</p>
+      <ul class="check-list">
+        <li>Un solo hilo por empresa, con historial completo siempre a mano</li>
+        <li>Notificaciones inteligentes — solo lo importante, sin spam</li>
+        <li>Pasás de bot a persona real sin repetir tu problema</li>
+        <li>Funciona en el celular y la web, sin instalar nada raro</li>
+      </ul>
+      <button class="btn btn-primary">Descargar la app</button>
+    </div>
+    <div class="col-visual">
+      <div class="phones-stack">
+        <div class="phone-shell back">
+          <div class="phone-list-header">Chats</div>
+          <div class="phone-search">🔍 Buscar una empresa...</div>
+          <div class="chat-row light"><span class="chip-avatar" data-icon="hubspot"></span><div class="chat-copy"><b>Mi Banco</b><span>Necesito ayuda con mi pedido...</span></div><span class="unread"></span></div>
+          <div class="chat-row light"><span class="chip-avatar" data-icon="whatsapp"></span><div class="chat-copy"><b>Tienda Norte</b><span>¿Tienen envío a Córdoba?</span></div></div>
+          <div class="chat-row light"><span class="chip-avatar" data-icon="zendesk"></span><div class="chat-copy"><b>Telecom Sur</b><span>Actualizado por Diego R.</span></div></div>
+          <div class="chat-row light"><span class="chip-avatar" data-icon="instagram"></span><div class="chat-copy"><b>Cafetería Lola</b><span>Perfecto, ¡muchas gracias!</span></div></div>
+        </div>
+
+        <div class="phone-shell front">
+          <div class="phone-convo-header">
+            <span class="convo-back">‹</span>
+            <span class="chip-avatar" data-icon="whatsapp"></span>
+            <div class="convo-id"><b>Tienda Norte</b><span class="convo-online"><i></i>En línea</span></div>
+            <span class="convo-call">📞</span>
+          </div>
+          <div class="phone-convo-body">
+            <div class="bubble received">¡Hola! 👋 Tu pedido #4521 salió hoy y llega el jueves.</div>
+            <div class="bubble sent">¿Puedo cambiar la dirección de envío?</div>
+            <div class="bubble received">¡Claro! Decime la nueva dirección y la actualizo al toque.</div>
+            <div class="quick-replies">
+              <span class="quick-reply-chip">Ver mi pedido</span>
+              <span class="quick-reply-chip">Hablar con un agente</span>
+            </div>
+          </div>
+          <div class="phone-convo-input">
+            <span>Escribí tu mensaje...</span>
+            <span class="convo-attach">📎</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURE: EMPRESAS ================= -->
+<section class="section section-alt">
+  <div class="section-inner two-col rev">
+    <div class="col-visual">
+      <div class="sync-visual">
+        <div class="sync-card"><b>Open Central</b><span>Conversación</span></div>
+        <div class="sync-line"><span class="sync-dot"></span></div>
+        <div class="sync-card"><b>Tu CRM</b><span>Ticket / Lead</span></div>
+      </div>
+    </div>
+    <div class="col-copy">
+      <div class="eyebrow">Para tu empresa</div>
+      <h2 class="h2 h2-tight">Cualquier CRM, una sola bandeja</h2>
+      <p class="lead lead-left">Tu equipo no necesita saltar entre pestañas. Open Central junta cada canal de chat en una sola interfaz, con el contexto del cliente traído directo desde tu CRM.</p>
+      <ul class="check-list">
+        <li>Historial completo del cliente en cada conversación</li>
+        <li>Asignación automática por equipo o agente</li>
+        <li>Sincronización bidireccional, sin copiar y pegar</li>
+        <li>Webhooks y logs de auditoría por integración</li>
+      </ul>
+      <button class="btn btn-primary">Conectar mi primer CRM</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INTEGRACIONES ================= -->
+<section class="section" id="integraciones">
+  <div class="integ-card">
+    <div class="integ-grid-bg" aria-hidden="true"></div>
+
+    <div class="integ-head">
+      <span class="integ-pill">🔗 Integraciones</span>
+      <h2 class="h2 h2-light">No reemplaces. Integrá.</h2>
+      <p class="lead lead-light">Entendemos el trabajo de reemplazar las herramientas de siempre. Por eso Open Central se conecta directo con lo que ya usás — del lado de las personas y del lado de la empresa.</p>
+      <a href="#" class="integ-link">Ver todas las integraciones <span aria-hidden="true">→</span></a>
+    </div>
+
+    <div class="integ-tiles">
+      <div class="integ-tile" data-icon="whatsapp" title="WhatsApp Business"></div>
+      <div class="integ-tile" data-icon="zendesk" title="Zendesk"></div>
+      <div class="integ-tile" data-icon="hubspot" title="HubSpot"></div>
+      <div class="integ-tile" data-icon="instagram" title="Instagram"></div>
+      <div class="integ-tile" data-icon="zapier" title="Zapier"></div>
+      <div class="integ-tile" data-icon="intercom" title="Intercom"></div>
+      <div class="integ-tile" data-icon="telegram" title="Telegram"></div>
+      <div class="integ-tile letter" data-color="#00a1e0" data-letters="SF" title="Salesforce"></div>
+      <div class="integ-tile" data-icon="make" title="Make"></div>
+      <div class="integ-tile letter" data-color="#28a745" data-letters="FD" title="Freshdesk"></div>
+      <div class="integ-tile letter" data-color="#4a154b" data-letters="SL" title="Slack"></div>
+      <div class="integ-tile" data-icon="zoho" title="Zoho CRM"></div>
+      <div class="integ-tile" data-icon="helpscout" title="Help Scout"></div>
+      <div class="integ-tile letter" data-color="#0b6e4f" data-letters="PD" title="Pipedrive"></div>
+      <div class="integ-tile letter" data-color="#334155" data-letters="WH" title="Webhooks"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIOS ================= -->
+<section class="section">
+  <div class="section-inner">
+    <div class="eyebrow">Testimonios</div>
+    <h2 class="h2">Personas y empresas, del mismo lado del chat</h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-quote">&ldquo;</div>
+        <p>Antes tenía que buscar el número de cada empresa en Google. Ahora les hablo a todas desde el mismo chat, como si fueran un contacto más.</p>
+        <b>Valentina Ríos</b><span>Usuaria de Open Central</span>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">&ldquo;</div>
+        <p>Conectamos Open Central con Zendesk en menos de una tarde. Nuestro tiempo de primera respuesta bajó un 40%.</p>
+        <b>Nombre Apellido</b><span>Head of Support</span>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">&ldquo;</div>
+        <p>Cada chat de WhatsApp ahora crea un lead automático en HubSpot. Dejamos de perder oportunidades.</p>
+        <b>Nombre Apellido</b><span>Sales Ops Manager</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="section section-alt">
+  <div class="section-inner stats-inner">
+    <div class="stat"><b>2019</b><span>Open Central fundado</span></div>
+    <div class="stat"><b>2M+</b><span>Usuarios activos</span></div>
+    <div class="stat"><b>1.200+</b><span>Empresas conectadas</span></div>
+    <div class="stat"><b>30+</b><span>Integraciones nativas</span></div>
+  </div>
+</section>
+
+<!-- ================= PRICING TEASER ================= -->
+<section class="section section-alt-2" id="precios">
+  <div class="section-inner center-narrow">
+    <h2 class="h2">Gratis para personas. Un plan para cada empresa.</h2>
+    <p class="lead">Usar Open Central para chatear con tus empresas favoritas siempre es gratis. Para negocios, desde equipos que arrancan hasta operaciones con múltiples marcas y CRMs conectados.</p>
+    <button class="btn btn-outline">Ver planes y precios</button>
+  </div>
+</section>
+
+<!-- ================= CTA FINAL ================= -->
+<section class="section section-dark cta-final">
+  <div class="section-inner center-narrow">
+    <h2 class="h2 h2-light">Elegí tu lado de la conversación</h2>
+    <p class="lead lead-light">Sea para chatear con tus empresas o para atender a tus clientes, Open Central arranca en minutos. Sin tarjeta de crédito.</p>
+    <div class="cta-final-btns">
+      <button class="btn btn-primary btn-light">Empezar gratis</button>
+      <button class="btn btn-outline-dark">Hablar con ventas</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer" id="recursos">
+  <div class="footer-inner">
+    <div class="footer-col footer-brand">
+      <div class="brand">
+        <img src="assets/logo-oc.png" alt="Open Central" class="brand-mark" />
+        <span class="brand-name footer-brand-name">Open Central</span>
+      </div>
+      <p>Un solo chat para personas y empresas.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Producto</h4>
+      <a href="#">Cómo funciona</a>
+      <a href="#integraciones">Integraciones</a>
+      <a href="#precios">Precios</a>
+      <a href="#">Seguridad</a>
+    </div>
+    <div class="footer-col">
+      <h4>Para empresas</h4>
+      <a href="#">Soporte al cliente</a>
+      <a href="#">Ventas y CRM</a>
+      <a href="#">Casos de éxito</a>
+      <a href="#">Hablar con ventas</a>
+    </div>
+    <div class="footer-col">
+      <h4>Para personas</h4>
+      <a href="#">Descargar la app</a>
+      <a href="#">Centro de ayuda</a>
+      <a href="#">Privacidad</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> Open Central. Todos los derechos reservados.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
